@@ -146,6 +146,19 @@ class Pessoa {
 
 	}
 
+	public function delete() {
+
+		$sql = new Sql();
+
+		$sql->select("DELETE FROM tb_pessoa WHERE idpessoa = :ID", array(
+			':ID'=>$this->getIdpessoa()
+		));
+
+		$this->setIdpessoa(0);
+		$this->setDesnome("");
+
+	}
+
 
 	public function __toString() {
 

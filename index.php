@@ -2,6 +2,15 @@
 
 require_once("config.php");
 
+$deletar = new Pessoa();
+
+$deletar->loadById(62);
+
+$deletar->delete();
+
+echo $deletar;
+
+/*
 $alterar = new Pessoa();
 
 $alterar->loadById(52);
@@ -9,6 +18,7 @@ $alterar->loadById(52);
 $alterar->update("Maria");
 
 echo $alterar;
+*/
 
 /*
 $inserir = new Pessoa("Meu Nome");
